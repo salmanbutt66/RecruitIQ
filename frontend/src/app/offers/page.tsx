@@ -127,7 +127,7 @@ export default function OffersPage() {
       <AppShell>
         <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-white">Offers</h1>
+            <h1 className="text-2xl font-bold text-[var(--foreground)]">Offers</h1>
             <p className="mt-1 text-[var(--muted)]">Create and manage candidate offer letters</p>
           </div>
           <button className="btn btn-primary" onClick={() => setShowForm(!showForm)}>
@@ -137,7 +137,7 @@ export default function OffersPage() {
 
         {showForm && (
           <form onSubmit={handleSubmit} className="card mb-8 space-y-4 p-6">
-            <h2 className="font-semibold text-white">Create offer</h2>
+            <h2 className="font-semibold text-[var(--foreground)]">Create offer</h2>
             <div className="grid gap-4 md:grid-cols-2">
               <div>
                 <label className="mb-1 block text-sm text-[var(--muted)]">Position</label>
@@ -237,7 +237,7 @@ export default function OffersPage() {
                 <tbody>
                   {offers.map((o) => (
                     <tr key={o.id}>
-                      <td className="text-white">
+                      <td className="text-[var(--foreground)]">
                         {candidateLabels[o.candidate_id] || o.candidate_id.slice(0, 8) + "…"}
                       </td>
                       <td>

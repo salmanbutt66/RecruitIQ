@@ -163,13 +163,13 @@ export default function PositionDetailPage() {
   return (
     <AuthGuard>
       <AppShell>
-        <Link href="/positions" className="text-sm text-[var(--muted)] hover:text-white">
+        <Link href="/positions" className="text-sm text-[var(--muted)] hover:text-[var(--foreground)]">
           ← Back to positions
         </Link>
 
         <div className="mt-4 mb-8 flex flex-wrap items-start justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-white">{position.title}</h1>
+            <h1 className="text-2xl font-bold text-[var(--foreground)]">{position.title}</h1>
             <p className="mt-1 text-[var(--muted)]">
               {[position.designation, position.location].filter(Boolean).join(" · ") || "No details"}
             </p>
@@ -196,7 +196,7 @@ export default function PositionDetailPage() {
 
         <div className="mb-8 grid gap-4 lg:grid-cols-2">
           <div className="card p-6">
-            <h2 className="mb-4 font-semibold text-white">AI screening</h2>
+            <h2 className="mb-4 font-semibold text-[var(--foreground)]">AI screening</h2>
             <p className="mb-4 text-sm text-[var(--muted)]">{position.job_description.slice(0, 200)}...</p>
             <div className="flex flex-wrap gap-2">
               <button
@@ -222,7 +222,7 @@ export default function PositionDetailPage() {
           </div>
 
           <div className="card p-6">
-            <h2 className="mb-4 font-semibold text-white">Upload resumes</h2>
+            <h2 className="mb-4 font-semibold text-[var(--foreground)]">Upload resumes</h2>
             <p className="mb-4 text-sm text-[var(--muted)]">PDF files only. Each upload creates a candidate.</p>
             <label className="btn btn-primary cursor-pointer text-sm">
               {uploadMutation.isPending ? "Uploading..." : "Choose PDF files"}
@@ -271,7 +271,7 @@ export default function PositionDetailPage() {
 
         <div className="card overflow-hidden">
           <div className="border-b border-[var(--border)] px-6 py-4">
-            <h2 className="font-semibold text-white">Candidates ({candidates.length})</h2>
+            <h2 className="font-semibold text-[var(--foreground)]">Candidates ({candidates.length})</h2>
           </div>
           {loadingCandidates && <p className="p-6 text-[var(--muted)]">Loading candidates...</p>}
           {!loadingCandidates && (
@@ -308,7 +308,7 @@ export default function PositionDetailPage() {
                         />
                       </td>
                       <td>
-                        <div className="font-medium text-white">
+                        <div className="font-medium text-[var(--foreground)]">
                           {c.full_name || c.email || "Unknown"}
                         </div>
                         {c.email && <div className="text-sm text-[var(--muted)]">{c.email}</div>}

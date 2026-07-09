@@ -105,22 +105,22 @@ export default function SettingsPage() {
     <AuthGuard>
       <AppShell>
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-white">Settings</h1>
+          <h1 className="text-2xl font-bold text-[var(--foreground)]">Settings</h1>
           <p className="mt-1 text-[var(--muted)]">Organization, team, and billing</p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="card p-6">
-            <h2 className="mb-4 font-semibold text-white">Your profile</h2>
+            <h2 className="mb-4 font-semibold text-[var(--foreground)]">Your profile</h2>
             {user && (
               <dl className="space-y-3 text-sm">
                 <div>
                   <dt className="text-[var(--muted)]">Name</dt>
-                  <dd className="text-white">{user.full_name}</dd>
+                  <dd className="text-[var(--foreground)]">{user.full_name}</dd>
                 </div>
                 <div>
                   <dt className="text-[var(--muted)]">Email</dt>
-                  <dd className="text-white">{user.email}</dd>
+                  <dd className="text-[var(--foreground)]">{user.email}</dd>
                 </div>
                 <div>
                   <dt className="text-[var(--muted)]">Role</dt>
@@ -133,7 +133,7 @@ export default function SettingsPage() {
           </div>
 
           <div className="card p-6">
-            <h2 className="mb-4 font-semibold text-white">Subscription</h2>
+            <h2 className="mb-4 font-semibold text-[var(--foreground)]">Subscription</h2>
             {subscription && (
               <>
                 <dl className="mb-4 space-y-3 text-sm">
@@ -151,7 +151,7 @@ export default function SettingsPage() {
                   </div>
                   <div>
                     <dt className="text-[var(--muted)]">Resumes used this month</dt>
-                    <dd className="text-white">{subscription.resumes_used_this_month}</dd>
+                    <dd className="text-[var(--foreground)]">{subscription.resumes_used_this_month}</dd>
                   </div>
                 </dl>
                 {user?.role === "org_admin" && (
@@ -170,7 +170,7 @@ export default function SettingsPage() {
 
           {canManage && org && (
             <div className="card p-6">
-              <h2 className="mb-4 font-semibold text-white">Organization</h2>
+              <h2 className="mb-4 font-semibold text-[var(--foreground)]">Organization</h2>
               <form onSubmit={handleOrgSubmit} className="space-y-4">
                 <div>
                   <label className="mb-1 block text-sm text-[var(--muted)]">Name</label>
@@ -201,7 +201,7 @@ export default function SettingsPage() {
 
           {canManage && (
             <div className="card p-6">
-              <h2 className="mb-4 font-semibold text-white">Invite team member</h2>
+              <h2 className="mb-4 font-semibold text-[var(--foreground)]">Invite team member</h2>
               <form onSubmit={handleInviteSubmit} className="space-y-4">
                 <div>
                   <label className="mb-1 block text-sm text-[var(--muted)]">Full name</label>
@@ -257,7 +257,7 @@ export default function SettingsPage() {
 
         <div className="card mt-6 overflow-hidden">
           <div className="border-b border-[var(--border)] px-6 py-4">
-            <h2 className="font-semibold text-white">Recent emails</h2>
+            <h2 className="font-semibold text-[var(--foreground)]">Recent emails</h2>
           </div>
           <div className="overflow-x-auto">
             <table>

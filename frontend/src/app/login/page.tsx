@@ -38,7 +38,7 @@ export default function LoginPage() {
     <div className="flex min-h-screen items-center justify-center px-4">
       <div className="card w-full max-w-md p-8">
         <div className="mb-8 text-center">
-          <h1 className="text-2xl font-bold text-white">
+          <h1 className="text-2xl font-bold text-[var(--foreground)]">
             Recruit<span className="text-[var(--accent)]">IQ</span>
           </h1>
           <p className="mt-2 text-sm text-[var(--muted)]">Sign in to your organization</p>

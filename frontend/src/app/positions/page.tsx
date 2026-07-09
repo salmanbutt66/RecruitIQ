@@ -69,7 +69,7 @@ export default function PositionsPage() {
       <AppShell>
         <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-white">Positions</h1>
+            <h1 className="text-2xl font-bold text-[var(--foreground)]">Positions</h1>
             <p className="mt-1 text-[var(--muted)]">Manage open roles and candidate pipelines</p>
           </div>
           <button className="btn btn-primary" onClick={() => setShowForm(!showForm)}>
@@ -79,7 +79,7 @@ export default function PositionsPage() {
 
         {showForm && (
           <form onSubmit={handleSubmit} className="card mb-8 space-y-4 p-6">
-            <h2 className="font-semibold text-white">Create position</h2>
+            <h2 className="font-semibold text-[var(--foreground)]">Create position</h2>
             <div className="grid gap-4 md:grid-cols-2">
               <div>
                 <label className="mb-1 block text-sm text-[var(--muted)]">Title</label>
@@ -152,7 +152,7 @@ export default function PositionsPage() {
                   {positions.map((p) => (
                     <tr key={p.id}>
                       <td>
-                        <div className="font-medium text-white">{p.title}</div>
+                        <div className="font-medium text-[var(--foreground)]">{p.title}</div>
                         {p.designation && (
                           <div className="text-sm text-[var(--muted)]">{p.designation}</div>
                         )}

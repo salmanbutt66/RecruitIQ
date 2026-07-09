@@ -40,7 +40,7 @@ export default function RegisterPage() {
     <div className="flex min-h-screen items-center justify-center px-4 py-8">
       <div className="card w-full max-w-md p-8">
         <div className="mb-8 text-center">
-          <h1 className="text-2xl font-bold text-white">
+          <h1 className="text-2xl font-bold text-[var(--foreground)]">
             Create your <span className="text-[var(--accent)]">RecruitIQ</span> account
           </h1>
           <p className="mt-2 text-sm text-[var(--muted)]">Start hiring with AI-powered screening</p>

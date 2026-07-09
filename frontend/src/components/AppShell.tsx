@@ -18,10 +18,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen">
-      <header className="border-b border-[var(--border)] bg-[rgba(18,24,41,0.8)] backdrop-blur">
+      <header className="border-b border-[var(--border)] bg-[rgba(255,255,255,0.8)] backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-8">
-            <Link href="/dashboard" className="text-xl font-bold text-white">
+            <Link href="/dashboard" className="text-xl font-bold text-[var(--foreground)]">
               Recruit<span className="text-[var(--accent)]">IQ</span>
             </Link>
             <nav className="hidden gap-4 md:flex">
@@ -30,7 +30,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                   key={link.href}
                   href={link.href}
                   className={`text-sm font-medium ${
-                    pathname.startsWith(link.href) ? "text-white" : "text-[var(--muted)] hover:text-white"
+                    pathname.startsWith(link.href)
+                      ? "text-[var(--foreground)]"
+                      : "text-[var(--muted)] hover:text-[var(--foreground)]"
                   }`}
                 >
                   {link.label}

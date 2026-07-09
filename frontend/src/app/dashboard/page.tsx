@@ -16,7 +16,7 @@ export default function DashboardPage() {
     <AuthGuard>
       <AppShell>
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-white">Dashboard</h1>
+          <h1 className="text-2xl font-bold text-[var(--foreground)]">Dashboard</h1>
           <p className="mt-1 text-[var(--muted)]">Overview of your recruitment pipeline</p>
         </div>
 
@@ -58,19 +58,19 @@ export default function DashboardPage() {
 
             <div className="grid gap-4 md:grid-cols-3">
               <Link href="/positions" className="card p-6 transition hover:border-[var(--accent)]">
-                <h2 className="font-semibold text-white">Manage positions</h2>
+                <h2 className="font-semibold text-[var(--foreground)]">Manage positions</h2>
                 <p className="mt-1 text-sm text-[var(--muted)]">
                   Create jobs, upload resumes, and run AI screening
                 </p>
               </Link>
               <Link href="/interviews" className="card p-6 transition hover:border-[var(--accent)]">
-                <h2 className="font-semibold text-white">Interview batches</h2>
+                <h2 className="font-semibold text-[var(--foreground)]">Interview batches</h2>
                 <p className="mt-1 text-sm text-[var(--muted)]">
                   Schedule panels and track evaluations
                 </p>
               </Link>
               <Link href="/offers" className="card p-6 transition hover:border-[var(--accent)]">
-                <h2 className="font-semibold text-white">Offers</h2>
+                <h2 className="font-semibold text-[var(--foreground)]">Offers</h2>
                 <p className="mt-1 text-sm text-[var(--muted)]">
                   Draft, send, and track offer letters
                 </p>
