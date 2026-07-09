@@ -1,0 +1,58 @@
+[project]
+name = "recruitiq-backend"
+version = "0.1.0"
+description = "RecruitIQ AI Recruitment Platform API"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "pydantic>=2.10.0",
+    "pydantic-settings>=2.6.0",
+    "authx==1.6.0",
+    "sqlalchemy[asyncio]>=2.0.36",
+    "asyncpg>=0.30.0",
+    "alembic>=1.14.0",
+    "redis>=5.2.0",
+    "arq>=0.26.1",
+    "crewai>=0.86.0",
+    "pydantic-ai>=0.0.39",
+    "litellm>=1.55.0",
+    "logfire[fastapi]>=2.6.0",
+    "authlib>=1.4.0",
+    "httpx>=0.28.0",
+    "stripe>=11.3.0",
+    "resend>=2.5.0",
+    "pymupdf>=1.25.0",
+    "python-multipart>=0.0.18",
+    "boto3>=1.35.0",
+    "python-jose[cryptography]>=3.3.0",
+    "passlib[bcrypt]>=1.7.4",
+    "bcrypt==4.0.1",
+    "psycopg2-binary>=2.9",
+    "email-validator>=2.2.0",
+    "jinja2>=3.1.4",
+    "sse-starlette>=2.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+    "httpx>=0.28.0",
+    "ruff>=0.8.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

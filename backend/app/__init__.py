@@ -1,0 +1,1 @@
+"""RecruitIQ backend application."""
