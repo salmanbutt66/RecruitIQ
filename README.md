@@ -20,8 +20,6 @@
   <p><em>Platform admin portal — organization oversight and audit logs</em></p>
 </div>
 
-> 📸 **Note:** add your own screenshots to a `docs/` folder in the repo root (e.g. `docs/screenshot-admin-login.png`, `docs/screenshot-dashboard.png`) and reference them here — GitHub renders them automatically once pushed.
-
 <br/>
 
 ## Contents
